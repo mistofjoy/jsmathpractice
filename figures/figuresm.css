@@ -49,6 +49,19 @@ header > p {
 main {
     margin: 2vh 5vw;
     width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: var(--basic-font-size);
+    color: var(--base-font-color);
+    font-weight: var(--basic-font-weight);
+}
+
+main > * {
+    transition: 500ms all;
+}
+
+.square, .rectangle, .triangle, .circle {
+    display: none;
 }
 
 /*footer*/
