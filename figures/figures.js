@@ -39,6 +39,39 @@ const typeOfFigure = () => {
     }
 }
 
+//menu del triangulo
+const triangleSides = () => {
+    let triangleType = document.getElementById("triangleType").value;
+    let base = document.getElementById("triangle__base");
+    let sideA = document.getElementById("triangle__sideA");
+    let sideB = document.getElementById("triangle__sideB");
+    switch (triangleType) {
+        case "--":
+            base.style.display = "none";
+            sideA.style.display = "none";
+            sideB.style.display = "none";
+            break;
+        case "eq":
+            base.style.display = "flex";
+            sideA.style.display = "none";
+            sideB.style.display = "none";
+            break;
+        case "is":
+            base.style.display = "flex";
+            sideA.style.display = "flex";
+            sideB.style.display = "none";
+            break;
+        case "es":
+            base.style.display = "flex";
+            sideA.style.display = "flex";
+            sideB.style.display = "flex";
+            break;
+    }
+}
+
+
+//Event trigger
 document.addEventListener("input", () => {
     typeOfFigure();
+    triangleSides();
 });

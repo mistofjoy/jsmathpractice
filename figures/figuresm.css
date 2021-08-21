@@ -64,6 +64,10 @@ main > * {
     display: none;
 }
 
+.triangle__base, .triangle__sideA, .triangle__sideB {
+    display: none;
+}
+
 /*footer*/
 footer {
     height: 10vh;
