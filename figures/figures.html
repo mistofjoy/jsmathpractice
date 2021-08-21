@@ -14,11 +14,68 @@
             <p>Una inusual calculadora de figuras geometricas, donde podrás calcular el perimetro y el area de rectangulos, triangulos, y circulos</p>
         </header>
         <main>
-
+            <form action="" class="figure">
+                <label for="">
+                    <span>Elije la figura que deseas calcular</span>
+                    <select name="figure" id="figure">
+                        <option value="cuadrado">Cuadrado</option>
+                        <option value="rectangulo">Rectangulo</option>
+                        <option value="triangulo">Triangulo</option>
+                        <option value="circulo">Circulo</option>
+                    </select>
+                </label>
+            </form>
+            <form action="" class="square">
+                <label class="square__side">
+                    <span>¿Cuanto mide uno de sus lados?</span>
+                    <input type="text" placeholder="5" id="squareSide" />
+                </label>
+            </form>
+            <form action="" class="rectangle">
+                <label class="rectangle__side--a">
+                    <span>¿Cuanto mide su base?</span>
+                    <input type="text" placeholder="5" id="rectangleSideA" />
+                </label>
+                <label class="rectangle__side--b">
+                    <span>¿Cuanto mide de alto?</span>
+                    <input type="text" placeholder="5" id="rectangleSideB" />
+                </label>
+            </form>
+            <form action="" class="triangle">
+                <label class="triangle__type">
+                    <span>Según sus lados ¿Que tipo de triangulo calcularás?</span>
+                    <select name="triangleType" id="triangleType">
+                        <option value="eq">Equilátero</option>
+                        <option value="is">Isósceles</option>
+                        <option value="es">Escaleno</option>
+                    </select>
+                </label>
+                <label class="triangleBase">
+                    <span>¿Cuanto mide su base?</span>
+                    <input type="text" placeholder="5" id="triangleBase" />
+                </label>
+                <label class="triangleSideA">
+                    <span>¿Cuanto mide uno de sus lados?</span>
+                    <input type="text" placeholder="5" id="triangleSideA" />
+                </label>
+                <label class="triangleSideB">
+                    <span>¿Cuanto mide otro de sus lados?</span>
+                    <input type="text" placeholder="5" id="triangleSideB" />
+                </label>
+            </form>
+            <form action="" class="circle">
+                <label class="circle__diameter">
+                    <span>¿Cuanto mide su diámetro?</span>
+                </label>
+            </form>
         </main>
+        <aside>
+
+        </aside>
         <footer>
             <a href="">Sobre el projecto</a>
             <p class="author">Hecho con amor por @mistofjoy</p>
         </footer>
+        <script src="./figures.js"></script>
     </body>
 </html>

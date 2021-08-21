@@ -46,7 +46,10 @@ header > p {
 }
 
 /*Main*/
-
+main {
+    margin: 2vh 5vw;
+    width: 100%;
+}
 
 /*footer*/
 footer {
