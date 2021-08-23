@@ -45,7 +45,7 @@ header > p {
     margin: 1vh 0;
 }
 
-/*Main*/
+/*Main default mas desaparecidos*/
 main {
     margin: 2vh 5vw;
     width: 100%;
@@ -58,15 +58,67 @@ main {
 
 main > * {
     transition: 500ms all;
+    margin-bottom: 2vh;
 }
 
-.square, .rectangle, .triangle, .circle {
+.figure {
+    width: 100%;
+    margin-top: 0;
+}
+
+.square, 
+.rectangle, 
+.triangle, 
+.circle {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.triangle__base, 
+.triangle__sideA, 
+.triangle__sideB {
     display: none;
 }
 
-.triangle__base, .triangle__sideA, .triangle__sideB {
-    display: none;
+.square > *, 
+.rectangle > *, 
+.triangle > *, 
+.circle > * {
+    margin-bottom: 2vh;
 }
+
+/*Cuadrado*/
+.square__side {
+    width: 100%;
+}
+
+.squareTrigger {
+    margin-bottom: 0;
+}
+
+.square__results {
+    width: 100%;
+    display: flex;
+    height: 25vh;
+}
+
+.square__results--img {
+    height: 100%;
+}
+
+.square__results--data {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    margin-left: 5vw;
+}
+
+.squareArea, .squarePerimeter {
+    font-weight: bold;
+}
+
 
 /*footer*/
 footer {

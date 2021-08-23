@@ -26,13 +26,26 @@
                     </select>
                 </label>
             </form>
-            <form action="" class="square" id="square">
+            <section action="" class="square" id="square">
                 <label class="square__side">
                     <span>¿Cuanto mide uno de sus lados?</span>
-                    <input type="text" placeholder="5" id="squareSide" />
+                    <input type="text" placeholder="Coloca el número aqui" id="squareSide" />
                 </label>
-            </form>
-            <form action="" class="rectangle" id="rectangle">
+                <section class="square__results">
+                    <img src="./img/square.png" alt="Un cuadrado" class="square__results--picture"/>
+                    <section class="square__results--data">
+                        <section>
+                            <p>Area = </p>
+                            <p class="squareArea" id="squareArea"></p>
+                        </section>
+                        <section>
+                            <p>Perimetro = </p>
+                            <p class="squarePerimeter" id="squarePerimeter"></p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section action="" class="rectangle" id="rectangle">
                 <label class="rectangle__side--a">
                     <span>¿Cuanto mide su base?</span>
                     <input type="text" placeholder="5" id="rectangleSideA" />
@@ -41,8 +54,8 @@
                     <span>¿Cuanto mide de alto?</span>
                     <input type="text" placeholder="5" id="rectangleSideB" />
                 </label>
-            </form>
-            <form action="" class="triangle" id="triangle">
+            </section>
+            <section action="" class="triangle" id="triangle">
                 <label class="triangle__type">
                     <span>Según sus lados ¿Que tipo de triangulo calcularás?</span>
                     <select name="triangleType" id="triangleType">
@@ -64,13 +77,13 @@
                     <span>¿Cuanto mide otro de sus lados?</span>
                     <input type="text" placeholder="5" id="triangleSideB" />
                 </label>
-            </form>
-            <form action="" class="circle" id="circle">
+            </section>
+            <section action="" class="circle" id="circle">
                 <label class="circle__diameter">
                     <span>¿Cuanto mide su diámetro?</span>
                     <input type="text" placeholder="5" id="diameter" />
                 </label>
-            </form>
+            </section>
         </main>
         <aside>
 
