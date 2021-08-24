@@ -93,10 +93,6 @@ main > * {
     width: 100%;
 }
 
-.squareTrigger {
-    margin-bottom: 0;
-}
-
 .square__results {
     width: 100%;
     display: flex;
@@ -119,6 +115,33 @@ main > * {
     font-weight: bold;
 }
 
+
+/*Rectangle*/
+.rectangle__side--a, .rectangle__side--b {
+    width: 100%;
+}
+
+.rectangle__results {
+    width: 100%;
+    display: flex;
+    height: 25vh;
+}
+
+.rectangle__results--img {
+    height: 100%;
+}
+
+.rectangle__results--data {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    margin-left: 5vw;
+}
+
+.rectangleArea, .rectanglePerimeter {
+    font-weight: bold;
+}
 
 /*footer*/
 footer {

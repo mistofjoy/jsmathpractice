@@ -81,6 +81,17 @@ const squareCalc = (side) => {
 }
 
 
+//Rectangle calculations
+const rectangleCalc = (sideA, sideB) => {
+    let area = sideA * sideB;
+    let perimeter = (2 * sideA) + (2 * sideB);
+    let areahtml = document.getElementById("rectangleArea");
+    let perimeterhtml = document.getElementById("rectanglePerimeter");
+    areahtml.innerHTML = `${area}`;
+    perimeterhtml.innerHTML = `${perimeter}`;
+}
+
+
 //EVENT TRIGGERS
 //figure
 let figure = document.getElementById("figure");
@@ -96,6 +107,26 @@ square.addEventListener("input", () => {
     let squareSideString = document.getElementById("squareSide").value;
     let squareSide = parseFloat(squareSideString);
     squareCalc(squareSide);
+});
+
+//rectangle
+let rectangleA = document.getElementById("rectangleSideA");
+let rectangleB = document.getElementById("rectangleSideB");
+
+rectangleA.addEventListener("input", () => {
+    let rectangleSideAString = document.getElementById("rectangleSideA").value;
+    let rectangleSideA = parseFloat(rectangleSideAString);
+    let rectangleSideBString = document.getElementById("rectangleSideB").value;
+    let rectangleSideB = parseFloat(rectangleSideBString);
+    rectangleCalc(rectangleSideA, rectangleSideB);
+});
+
+rectangleB.addEventListener("input", () => {
+    let rectangleSideAString = document.getElementById("rectangleSideA").value;
+    let rectangleSideA = parseFloat(rectangleSideAString);
+    let rectangleSideBString = document.getElementById("rectangleSideB").value;
+    let rectangleSideB = parseFloat(rectangleSideBString);
+    rectangleCalc(rectangleSideA, rectangleSideB);
 });
 
 //triangle
