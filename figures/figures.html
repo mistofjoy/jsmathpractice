@@ -86,10 +86,29 @@
                     <span>¿Cuanto mide uno de sus lados?</span>
                     <input type="text" placeholder="5" id="triangleSideA" />
                 </label>
+                <label class="triangle__angle" id="triangle__angle">
+                    <span>¿Cuanto mide el angulo entre ambos (en grados)?</span>
+                    <input type="text" placeholder="5" id="triangleAngle" />
+                </label>
                 <label class="triangle__sideB" id="triangle__sideB">
-                    <span>¿Cuanto mide otro de sus lados?</span>
+                    <span>¿Cuanto mide el otro de sus lados?</span>
                     <input type="text" placeholder="5" id="triangleSideB" />
                 </label>
+                <section class="triangle__results" id="triangle__results">
+                    <img src="./img/eqtriangle.png" alt="Un triangulo equilatero" class="triangle__results--picture" id="eqtriangleIMG" />
+                    <img src="./img/istriangle.png" alt="Un triangulo isósceles" class="triangle__results--picture" id="istriangleIMG" />
+                    <img src="./img/estriangle2.png" alt="Un triangulo escaleno" class="triangle__results--picture" id="estriangleIMG" />
+                    <section class="triangle__results--data">
+                        <section>
+                            <p>Area = </p>
+                            <p class="triangleArea" id="triangleArea"></p>
+                        </section>
+                        <section>
+                            <p>Perimetro = </p>
+                            <p class="trianglePerimeter" id="trianglePerimeter"></p>
+                        </section>
+                    </section>
+                </section>
             </section>
             <section action="" class="circle" id="circle">
                 <label class="circle__diameter">

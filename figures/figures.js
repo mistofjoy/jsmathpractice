@@ -44,27 +44,52 @@ const triangleSides = () => {
     let triangleType = document.getElementById("triangleType").value;
     let base = document.getElementById("triangle__base");
     let sideA = document.getElementById("triangle__sideA");
+    let angle = document.getElementById("triangle__angle");
     let sideB = document.getElementById("triangle__sideB");
+    let triangleResults = document.getElementById("triangle__results");
+    let eqtriangleIMG = document.getElementById("eqtriangleIMG");
+    let istriangleIMG = document.getElementById("istriangleIMG");
+    let estriangleIMG = document.getElementById("estriangleIMG");
     switch (triangleType) {
         case "--":
             base.style.display = "none";
             sideA.style.display = "none";
+            angle.style.display = "none";
             sideB.style.display = "none";
+            triangleResults.style.display = "none";
+            eqtriangleIMG.display = "none";
+            istriangleIMG.display = "none";
+            estriangleIMG.display = "none";
             break;
         case "eq":
             base.style.display = "flex";
             sideA.style.display = "none";
+            angle.style.display = "none";
             sideB.style.display = "none";
+            triangleResults.style.display = "flex";
+            eqtriangleIMG.style.display = "flex";
+            istriangleIMG.style.display = "none";
+            estriangleIMG.style.display = "none";
             break;
         case "is":
             base.style.display = "flex";
             sideA.style.display = "flex";
+            angle.style.display = "none";
             sideB.style.display = "none";
+            triangleResults.style.display = "flex";
+            eqtriangleIMG.style.display = "none";
+            istriangleIMG.style.display = "flex";
+            estriangleIMG.style.display = "none";
             break;
         case "es":
             base.style.display = "flex";
             sideA.style.display = "flex";
+            angle.style.display = "flex";
             sideB.style.display = "flex";
+            triangleResults.style.display = "flex";
+            eqtriangleIMG.style.display = "none";
+            istriangleIMG.style.display = "none";
+            estriangleIMG.style.display = "flex";
             break;
     }
 }
@@ -91,6 +116,34 @@ const rectangleCalc = (sideA, sideB) => {
     perimeterhtml.innerHTML = `${perimeter}`;
 }
 
+//triangle calculations
+const triangleCalc = (base, side, angle, sideB) => {
+    let triangleType = document.getElementById("triangleType").value;
+    let area, perimeter, height, radians;
+    switch (triangleType) {
+        case "eq":
+            perimeter = base * 3;
+            radians = 60 * (Math.PI/180);
+            height = base * Math.sin(radians);
+            area = base * height / 2;
+            break;
+        case "is":
+            perimeter = base + (2 * side);
+            height = Math.sqrt((side ** 2) - ((base / 2) ** 2));
+            area = base * height / 2;
+            break;
+        case "es":
+            perimeter = base + side + sideB;
+            radians = angle * (Math.PI/180);
+            height = side * Math.sin(radians);
+            area = base * height / 2;
+            break;
+    }
+    let areahtml = document.getElementById("triangleArea");
+    let perimeterhtml = document.getElementById("trianglePerimeter");
+    areahtml.innerHTML = `${area}`;
+    perimeterhtml.innerHTML = `${perimeter}`;
+}
 
 //EVENT TRIGGERS
 //figure
@@ -134,4 +187,57 @@ let triangle = document.getElementById("triangleType");
 
 triangle.addEventListener("input", () => {
     triangleSides();
+});
+
+let triangleA = document.getElementById("triangleBase");
+let triangleB = document.getElementById("triangleSideA");
+let triangleC = document.getElementById("triangleAngle");
+let triangleD = document.getElementById("triangleSideB");
+
+triangleA.addEventListener("input", () => {
+    let triangleBaseString = document.getElementById("triangleBase").value;
+    let triangleSideAString = document.getElementById("triangleSideA").value;
+    let triangleAngleString = document.getElementById("triangleAngle").value;
+    let triangleSideBString = document.getElementById("triangleSideB").value;
+    let triangleBase = parseFloat(triangleBaseString);
+    let triangleSideA = parseFloat(triangleSideAString);
+    let triangleAngle = parseFloat(triangleAngleString);
+    let triangleSideB = parseFloat(triangleSideBString);
+    triangleCalc(triangleBase, triangleSideA, triangleAngle, triangleSideB);
+});
+
+triangleB.addEventListener("input", () => {
+    let triangleBaseString = document.getElementById("triangleBase").value;
+    let triangleSideAString = document.getElementById("triangleSideA").value;
+    let triangleAngleString = document.getElementById("triangleAngle").value;
+    let triangleSideBString = document.getElementById("triangleSideB").value;
+    let triangleBase = parseFloat(triangleBaseString);
+    let triangleSideA = parseFloat(triangleSideAString);
+    let triangleAngle = parseFloat(triangleAngleString);
+    let triangleSideB = parseFloat(triangleSideBString);
+    triangleCalc(triangleBase, triangleSideA, triangleAngle, triangleSideB);
+});
+
+triangleC.addEventListener("input", () => {
+    let triangleBaseString = document.getElementById("triangleBase").value;
+    let triangleSideAString = document.getElementById("triangleSideA").value;
+    let triangleAngleString = document.getElementById("triangleAngle").value;
+    let triangleSideBString = document.getElementById("triangleSideB").value;
+    let triangleBase = parseFloat(triangleBaseString);
+    let triangleSideA = parseFloat(triangleSideAString);
+    let triangleAngle = parseFloat(triangleAngleString);
+    let triangleSideB = parseFloat(triangleSideBString);
+    triangleCalc(triangleBase, triangleSideA, triangleAngle, triangleSideB);
+});
+
+triangleD.addEventListener("input", () => {
+    let triangleBaseString = document.getElementById("triangleBase").value;
+    let triangleSideAString = document.getElementById("triangleSideA").value;
+    let triangleAngleString = document.getElementById("triangleAngle").value;
+    let triangleSideBString = document.getElementById("triangleSideB").value;
+    let triangleBase = parseFloat(triangleBaseString);
+    let triangleSideA = parseFloat(triangleSideAString);
+    let triangleAngle = parseFloat(triangleAngleString);
+    let triangleSideB = parseFloat(triangleSideBString);
+    triangleCalc(triangleBase, triangleSideA, triangleAngle, triangleSideB);
 });
