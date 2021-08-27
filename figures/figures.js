@@ -145,6 +145,17 @@ const triangleCalc = (base, side, angle, sideB) => {
     perimeterhtml.innerHTML = `${perimeter}`;
 }
 
+
+//circle calculations
+const circleCalc = (diameter) => {
+    let area = Math.PI * ((diameter / 2) ** 2);
+    let perimeter = Math.PI * diameter;
+    let areahtml = document.getElementById("circleArea");
+    let perimeterhtml = document.getElementById("circlePerimeter");
+    areahtml.innerHTML = `${area}`;
+    perimeterhtml.innerHTML = `${perimeter}`;
+}
+
 //EVENT TRIGGERS
 //figure
 let figure = document.getElementById("figure");
@@ -240,4 +251,11 @@ triangleD.addEventListener("input", () => {
     let triangleAngle = parseFloat(triangleAngleString);
     let triangleSideB = parseFloat(triangleSideBString);
     triangleCalc(triangleBase, triangleSideA, triangleAngle, triangleSideB);
+});
+
+//circle
+circle.addEventListener("input", () => {
+    let circleDiameterString = document.getElementById("diameter").value;
+    let circleDiameter = parseFloat(circleDiameterString);
+    circleCalc(circleDiameter);
 });
