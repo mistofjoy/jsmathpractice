@@ -1,0 +1,77 @@
+/*Variables*/
+:root {
+    --basic-font-size: 1.4rem;
+    --title-font-size: 3.2rem;
+    --base-font-color: #000000;
+    --background-color: #FCFB3B;
+    --basic-font-weight: 500;
+}
+
+/*Default*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Header*/
+header {
+    margin: 5vh 5vw;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+header > h1 {
+    text-align: center;
+    color: var(--base-font-color);
+}
+
+header > p {
+    font-size: var(--basic-font-size);
+    color: var(--base-font-color);
+    font-weight: var(--basic-font-weight);
+    text-align: center;
+    margin: 1vh 0;
+}
+
+
+/*Main*/
+
+
+/*footer*/
+footer {
+    height: 10vh;
+    margin: 5vh 5vw;
+    margin-bottom: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > a {
+    text-decoration: none;
+    font-size: var(--basic-font-size);
+    color: var(--base-font-color);
+    font-weight: var(--basic-font-weight);
+}
+
+footer > a:hover {
+    text-decoration: underline;
+}
+
+footer > p {
+    font-size: var(--basic-font-size);
+    color: var(--base-font-color);
+    font-weight: var(--basic-font-weight);
+}
