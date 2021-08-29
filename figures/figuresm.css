@@ -61,6 +61,19 @@ main > * {
     margin-bottom: 2vh;
 }
 
+input, select {
+    outline: none;
+    height: 2.4rem;
+    font-size: var(--basic-font-size);
+    color: var(--base-font-color);
+    border-radius: 2.4rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--base-font-color);
+    padding-left: 1rem;
+}
+
 .figure {
     width: 100%;
     margin-top: 0;

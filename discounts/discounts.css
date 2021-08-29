@@ -46,8 +46,52 @@ header > p {
 }
 
 
-/*Main*/
+/*Main default*/
+main {
+    margin: 2vh 5vw;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: var(--basic-font-size);
+    color: var(--base-font-color);
+    font-weight: var(--basic-font-weight);
+}
 
+main > * {
+    transition: 500ms all;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+/*Main*/
+.couponA, .couponB, .couponC {
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.couponA > p, .couponB > p, .couponC > p {
+    font-weight: bold;
+    width: 100%;
+}
+
+.results > * {
+    margin-bottom: 2vh;
+}
+
+/*Input boxes*/
+.inputs {
+    outline: none;
+    height: 2.4rem;
+    font-size: var(--basic-font-size);
+    color: var(--base-font-color);
+    border-radius: 2.4rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--base-font-color);
+    padding-left: 1rem;
+}
 
 /*footer*/
 footer {

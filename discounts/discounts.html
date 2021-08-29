@@ -22,7 +22,7 @@
                 <span>¿Cual es el porcentaje (%) de descuento?</span>
                 <input type="number" placeholder="ej: 15" id="discount" class="inputs" />
             </label>
-            <label>
+            <label class="coupon__label">
                 <span>¿Tienes un cupón?</span>
                 <select name="coupon" class="inputs" id="coupon">
                     <option value="false">No</option>
@@ -30,6 +30,7 @@
                 </select>
             </label>
             <section class="couponA">
+                <p>Cupón A</p>
                 <label class="coupon__label--A">
                     <span>¿Que tipo de cupón es?</span>
                     <select name="couponType" class="inputs" id="couponTypeA">
@@ -40,10 +41,11 @@
                 </label>
                 <label class="coupon__value--A">
                     <span>¿Cúal es el descuento?</span>
-                    <input type="number" id="couponValueA" />
+                    <input type="number" id="couponValueA" class="inputs" />
                 </label>
             </section>
             <section class="couponB">
+                <p>Cupón B</p>
                 <label class="coupon__label--B">
                     <span>¿Que tipo de cupón es?</span>
                     <select name="couponType" class="inputs" id="couponTypeB">
@@ -54,10 +56,11 @@
                 </label>
                 <label class="coupon__value--B">
                     <span>¿Cúal es el descuento?</span>
-                    <input type="number" id="couponValueB" />
+                    <input type="number" id="couponValueB" class="inputs" />
                 </label>
             </section>
             <section class="couponC">
+                <p>Cupón C</p>
                 <label class="coupon__label--C">
                     <span>¿Que tipo de cupón es?</span>
                     <select name="couponType" class="inputs" id="couponTypeC">
@@ -68,16 +71,14 @@
                 </label>
                 <label class="coupon__value--C">
                     <span>¿Cúal es el descuento?</span>
-                    <input type="number" id="couponValueC" />
+                    <input type="number" id="couponValueC" class="inputs" />
                 </label>
             </section>
             <section class="results">
-                <p>El precio original es de: </p>
-                <p id="originalPrice"></p>
-                <p>El precio final es de: </p>
-                <p id="finalPrice"></p>
-                <p>Si compras, ahorrarás: </p>
-                <p id="saving"></p>
+                <p><strong>Resultados</strong></p>
+                <p>El precio original es de: <strong id="originalPrice"></strong><strong> $</strong></p>
+                <p>El precio final es de: <strong id="finalPrice"></strong><strong> $</strong></p>
+                <p>Si compras, ahorrarás: <strong id="saving"></strong><strong> $</strong></p>
             </section>
         </main>
         <footer>
