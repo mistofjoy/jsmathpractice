@@ -78,6 +78,8 @@ main > * {
 
 .data__label {
     margin-bottom: 2vh;
+    display: none;
+    align-items: center;
 }
 
 .data__label > span {
